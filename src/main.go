@@ -13,5 +13,7 @@ func main(){
 	fmt.Println(tt.Name)
 	entity.Echo()
 
-
+	pointTest()
 }
+
+
