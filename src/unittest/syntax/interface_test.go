@@ -35,7 +35,7 @@ func (cat *Cat) say(){
 	fmt.Println("i am a cat")
 }
 
-func Test1(t *testing.T){
+func TestInterface1(t *testing.T){
 	var animal Animal
 	animal = new(Bird)
 	animal.say()
@@ -58,4 +58,12 @@ func Test1(t *testing.T){
 	fmt.Println(animal)
 
 	//animal = Cat{} //编译不通过 Cannot use Cat{} (type Cat) as type Animal in assignment
+}
+
+func TestInterfaceType(t *testing.T){
+	var animal Animal
+	animal = new(Bird)
+	var v = animal.(Animal);
+
+	fmt.Println(v)
 }
